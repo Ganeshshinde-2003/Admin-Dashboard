@@ -22,10 +22,13 @@ const App = () => {
               </button>
             </TooltipComponent>
           </div>
-          {activeMenu ? 
-             <div className="w-72 fixed sidebar dark:bg-secondary-dark-bg bg-white" > 
-                SideBar
-             </div> : <div> No SideBar </div>}
+          {activeMenu ? (
+            <div className="w-72 fixed sidebar dark:bg-secondary-dark-bg bg-white">
+              SideBar
+            </div>
+          ) : (
+            <div className="w-0 dark:bg-secondary-dark-bg"> No SideBar </div>
+          )}
         </div>
       </BrowserRouter>
     </div>
