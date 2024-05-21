@@ -1,25 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { FiSettings } from "react-icons/fi";
+import { TooltipComponent } from "@syncfusion/ej2-react-popups";
 
-function App() {
+import "./App.css";
+
+const App = () => {
+  const activeMenu = true;
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <BrowserRouter>
+        <div className="flex relative dark:bg-main-dark-bg">
+          <div className="fixed right-4 bottom-4" style={{ zIndex: "1000" }}>
+            <TooltipComponent content="settings" position="Top">
+              <button
+                type="button"
+                className="text-3xl p-3 hover:drop-shadow-xl hover:bg-light-gray text-white"
+                style={{ background: "blue", borderRadius: "50%" }}
+              >
+                <FiSettings />
+              </button>
+            </TooltipComponent>
+          </div>
+          {activeMenu ? 
+             <div className="w-72 fixed sidebar dark:bg-secondary-dark-bg bg-white" > 
+                SideBar
+             </div> : <div> No SideBar </div>}
+        </div>
+      </BrowserRouter>
     </div>
   );
-}
+};
 
 export default App;
