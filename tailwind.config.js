@@ -40,7 +40,7 @@ module.exports = {
         },
         backgroundImage: {
           'hero-pattern':
-            "url('https://i.ibb.co/MkvLDfb/Rectangle-4389.png')",
+            "url('https://assets-global.website-files.com/5dfbb65fcb94d5455876bad9/63a367dd65cdf1287bb13bb1_Invoca-Customer_Care_Definition_Importance_and_5_Essential_Tips-blog-1920x1080.png')",
         },
       },
     },

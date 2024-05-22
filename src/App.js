@@ -20,7 +20,7 @@ import {
   ColorMapping,
   ColorPicker,
   Editor,
-  Line
+  Line,
 } from "./pages";
 import { useStateContext } from "./contexts/ContextProvider";
 
@@ -28,7 +28,7 @@ import "./App.css";
 
 const App = () => {
   const { activeMenu } = useStateContext();
-  
+
   return (
     <div>
       <BrowserRouter>
@@ -49,7 +49,10 @@ const App = () => {
               <Sidebar />
             </div>
           ) : (
-            <div className="w-0 dark:bg-secondary-dark-bg"> <Sidebar /> </div>
+            <div className="w-0 dark:bg-secondary-dark-bg">
+              {" "}
+              <Sidebar />{" "}
+            </div>
           )}
           <div
             className={`dark:bg-main-bg bg-main-bg min-h-screen w-full ${
@@ -57,15 +60,14 @@ const App = () => {
             }`}
           >
             <div className="fixed md:static bg-main-bg dark:bg-main-dark-bg navbar w-full">
-              <Navbar/>
+              <Navbar />
             </div>
-          </div>
 
-          <div>
-            <Routes>
-              {/* dashboard  */}
-              <Route path="/" element={(<Ecommerce />)} />
-                <Route path="/ecommerce" element={(<Ecommerce />)} />
+            <div>
+              <Routes>
+                {/* dashboard  */}
+                <Route path="/" element={<Ecommerce />} />
+                <Route path="/ecommerce" element={<Ecommerce />} />
 
                 {/* pages  */}
                 <Route path="/orders" element={<Orders />} />
@@ -87,7 +89,8 @@ const App = () => {
                 <Route path="/color-mapping" element={<ColorMapping />} />
                 <Route path="/pyramid" element={<Pyramid />} />
                 <Route path="/stacked" element={<Stacked />} />
-            </Routes>
+              </Routes>
+            </div>
           </div>
         </div>
       </BrowserRouter>
