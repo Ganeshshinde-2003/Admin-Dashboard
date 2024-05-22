@@ -17,8 +17,8 @@ Welcome to the Project Syncfusion Dashboard! This project is a showcase of front
   
 ## 📦 Installation
 
-1. Clone the repository: `git clone https://github.com/your-username/project_syncfusion_dashboard.git`
-2. Navigate to the project directory: `cd project_syncfusion_dashboard`
+1. Clone the repository: `git clone https://github.com/Ganeshshinde-2003/Admin-Dashboard.git`
+2. Navigate to the project directory: `cd admin-dashboard`
 3. Install dependencies: `npm install`
 4. Start the development server: `npm start`
 
